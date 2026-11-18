@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Kelompok 1 TI25G</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="profil">
+  <div class="app-shell">
+    <div class="aero-window">
+      <div class="window-titlebar">
+        <div class="titlebar-left">
+          <span class="orb-icon">⚙️</span>
+          <span>Kelompok 1 TI25G — /profil</span>
+        </div>
+        <div class="window-controls">
+          <div class="win-btn win-min">_</div>
+          <div class="win-btn win-max">□</div>
+          <button type="button" id="logoutBtn" class="win-btn win-close">✕</button>
+        </div>
+      </div>
+
+      <nav class="aero-navbar">
+        <div class="nav-links">
+          <a href="/beranda" class="gel-pill">🏠 Beranda</a>
+          <a href="/anggota" class="gel-pill">👥 Anggota</a>
+          <a href="/matkul" class="gel-pill">📚 Mata Kuliah</a>
+          <a href="/obrolan" class="gel-pill">💬 Obrolan</a>
+          <a href="/identitas" class="gel-pill">🪪 Identitas</a>
+          <a href="/profil" class="gel-pill active-nav">⚙️ Profil</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div id="liveClockWidget" class="wmp-status-box">● READY</div>
+          <a href="/profil" id="navUserChip" class="gel-pill" style="padding:5px 12px;"></a>
+        </div>
+      </nav>
+
+      <div class="window-body">
+        <div class="aero-card" style="max-width:500px;margin:0 auto;text-align:center;">
+          <h2 class="hero-chrome-title" style="font-size:1.55rem;">EDIT PROFIL</h2>
+          <p id="profilFullName" style="font-weight:800;color:#004385;margin-top:6px;"></p>
+          <p id="profilNim" style="font-size:0.85rem;color:#0057A8;margin-bottom:14px;"></p>
+
+          <img id="profilPreviewImg" src="/img/abdul.jpg" alt="Profil" class="glossy-avatar" style="width:115px;height:115px;margin-bottom:14px;">
+
+          <form id="profilForm" style="text-align:left;display:grid;gap:11px;">
+            <div>
+              <label style="font-weight:800;color:#004385;display:block;margin-bottom:4px;">Username:</label>
+              <input type="text" id="profilUsernameInput" class="aero-input" required>
+            </div>
+            <div>
+              <label style="font-weight:800;color:#004385;display:block;margin-bottom:4px;">Foto Profil:</label>
+              <input type="file" id="profilPhotoInput" accept="image/*" class="aero-input">
+            </div>
+            <button type="submit" class="gel-pill gel-pill-lime" style="width:100%;margin-top:4px;">
+              Simpan
+            </button>
+          </form>
+
+          <div id="profilSaveStatus" style="display:none;margin-top:12px;padding:8px;border-radius:10px;background:#7ED321;color:#fff;font-weight:800;">
+            Profil tersimpan.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

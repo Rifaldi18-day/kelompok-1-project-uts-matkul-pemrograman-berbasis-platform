@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Kelompok 1 TI25G</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="login">
+  <div class="login-wrapper">
+    <div class="aero-window login-window">
+      <div class="window-titlebar">
+        <div class="titlebar-left">
+          <span class="orb-icon">🔐</span>
+          <span>Login Kelompok 1 — TI25G</span>
+        </div>
+        <div class="window-controls">
+          <div class="win-btn win-min">_</div>
+          <div class="win-btn win-max">□</div>
+          <div class="win-btn win-close">✕</div>
+        </div>
+      </div>
+
+      <div class="window-body" style="text-align:center;">
+        <span class="orb-icon orb-lime" style="width:46px;height:46px;font-size:22px;margin-bottom:8px;">🌐</span>
+        <h1 class="hero-chrome-title">KELOMPOK 1 TI25G</h1>
+        <p class="y2k-subtitle" style="margin:6px 0 18px;">Masukkan NIM Anggota</p>
+
+        <form id="loginForm">
+          <div style="text-align:left;margin-bottom:14px;">
+            <label style="font-weight:800;color:#004385;display:block;margin-bottom:6px;">Sandi (NIM):</label>
+            <input type="password" id="nimInput" class="aero-input" placeholder="Masukkan NIM..." required>
+          </div>
+          <button type="submit" class="gel-pill gel-pill-lime" style="width:100%;font-size:1rem;padding:11px;">
+            Masuk
+          </button>
+        </form>
+
+        <div id="loginError" class="login-error-banner">
+          KAMU BUKAN KELOMPOK 1
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

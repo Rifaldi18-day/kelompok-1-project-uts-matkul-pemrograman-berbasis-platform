@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mata Kuliah - Kelompok 1 TI25G</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="matkul">
+  <div class="app-shell">
+    <div class="aero-window">
+      <div class="window-titlebar">
+        <div class="titlebar-left">
+          <span class="orb-icon">📚</span>
+          <span>Kelompok 1 TI25G — /matkul</span>
+        </div>
+        <div class="window-controls">
+          <div class="win-btn win-min">_</div>
+          <div class="win-btn win-max">□</div>
+          <button type="button" id="logoutBtn" class="win-btn win-close">✕</button>
+        </div>
+      </div>
+
+      <nav class="aero-navbar">
+        <div class="nav-links">
+          <a href="/beranda" class="gel-pill">🏠 Beranda</a>
+          <a href="/anggota" class="gel-pill">👥 Anggota</a>
+          <a href="/matkul" class="gel-pill active-nav">📚 Mata Kuliah</a>
+          <a href="/obrolan" class="gel-pill">💬 Obrolan</a>
+          <a href="/identitas" class="gel-pill">🪪 Identitas</a>
+          <a href="/profil" class="gel-pill">⚙️ Profil</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div id="liveClockWidget" class="wmp-status-box">● READY</div>
+          <a href="/profil" id="navUserChip" class="gel-pill" style="padding:5px 12px;"></a>
+        </div>
+      </nav>
+
+      <div class="window-body">
+        <div style="margin-bottom:14px;">
+          <h1 class="hero-chrome-title">MATA KULIAH TI25G</h1>
+          <p class="y2k-subtitle">Pilih mata kuliah untuk membuka detail jadwal, sesi, dan tugas</p>
+        </div>
+
+        <div id="matkulGridContainer" class="box-grid-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
